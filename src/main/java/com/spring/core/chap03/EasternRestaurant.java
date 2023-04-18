@@ -1,12 +1,17 @@
-package com.spring.core.chap01;
+package com.spring.core.chap03;
 
 public class EasternRestaurant implements Restaurant {
 
     // 셰프
-    private Chef chef = new KimuraChef();
+    private Chef chef;
 
     // 요리 코스
-    private Course course = new SushiCourse();
+    private Course course;
+
+    public EasternRestaurant(Chef chef, Course course) {
+        this.chef = chef;
+        this.course = course;
+    }
 
     // 요리를 주문하는 기능
     public void order() {
